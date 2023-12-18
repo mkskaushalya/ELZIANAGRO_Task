@@ -176,19 +176,40 @@ section .cont .right p{
 #services .service-line .service-card .ico-sec{
     height: 60px;
     width: 60px;
-    background-color: var(--blue);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     position: relative;
 }
+#services .service-line .service-card:nth-child(odd) .ico-sec{
+    background-color: var(--blue);
+}
+#services .service-line .service-card:nth-child(even) .ico-sec{
+    background-color: var(--orange);
+}
+#services .service-line .service-card .ico-sec::after{
+    content: "";
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    position: absolute;
+    
+}
+#services .service-line .service-card:nth-child(odd) .ico-sec::after{
+    border: 3px dotted var(--blue);
+    border-bottom: 3px solid var(--blue);
+}
+#services .service-line .service-card:nth-child(even) .ico-sec::after{
+    border: 3px dotted var(--orange);
+    border-bottom: 3px solid var(--orange);
+}
 #services .service-line .service-card::after{
     content: "";
     width: 1px;
     position: absolute;
-    height: 40px;
-    top: 60px;
+    height: 35px;
+    top: 65px;
     background-color: #bbb;
 
 }
@@ -196,8 +217,8 @@ section .cont .right p{
     max-width: 30px;
     max-height: 30px;
     fill: #fff;
-
 }
+
 #services .service-line .service-card .description{
     height: 80px;
     display: flex;
@@ -207,4 +228,5 @@ section .cont .right p{
 #services .service-line .service-card .description p{
     font-size: 0.55rem;
     text-align: center;
+    font-weight: 600;
 }
