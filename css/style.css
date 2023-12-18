@@ -149,3 +149,62 @@ section .cont .right p{
     left: 10px;
     border: 2px solid var(--orange);
 }
+#services .service-line{
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#services .service-line::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    background-color: #bbb;
+}
+#services .service-line .service-card{
+    width: calc(100%/5);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 50px;
+    height: 200px;
+}
+
+#services .service-line .service-card .ico-sec{
+    height: 60px;
+    width: 60px;
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+}
+#services .service-line .service-card::after{
+    content: "";
+    width: 1px;
+    position: absolute;
+    height: 40px;
+    top: 60px;
+    background-color: #bbb;
+
+}
+#services .service-line .service-card .ico-sec svg{
+    max-width: 30px;
+    max-height: 30px;
+    fill: #fff;
+
+}
+#services .service-line .service-card .description{
+    height: 80px;
+    display: flex;
+    align-items: flex-start;
+    
+}
+#services .service-line .service-card .description p{
+    font-size: 0.55rem;
+    text-align: center;
+}
